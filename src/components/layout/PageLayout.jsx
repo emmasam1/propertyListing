@@ -69,7 +69,7 @@ const PageLayout = () => {
               </h3>
               <Menu mode="inline" style={{ borderRight: 0 }} selectable={false}>
                 <div
-                  className="cursor-pointer border-t border-gray-300 py-5 flex justify-between items-center mb-4"
+                  className="cursor-pointer border-t border-gray-300 py-5 flex justify-between items-center"
                   onClick={showModal}
                 >
                   <div className="cursor-pointer">
@@ -106,7 +106,7 @@ const PageLayout = () => {
                   </div>
                 </div>
 
-                <div className="border-b border-gray-300 py-5 mt-4">
+                <div className="border-b border-gray-300 py-5">
                   <div className="flex items-center gap-2">
                     <Menu.Item key="price" icon={<SlSizeFullscreen />} disabled>
                     Size
