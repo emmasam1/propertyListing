@@ -121,7 +121,7 @@ const Home = () => {
               </div>
             }
           >
-            <h1 className="font-bold text-1xl">{property.title}</h1>
+            <h1 className="font-bold text-[1.3rem]">{property.title}</h1>
 
             <div className="flex justify-between items-center mt-4">
               <div className="flex items-center gap-2">
