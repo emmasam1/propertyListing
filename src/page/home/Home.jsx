@@ -137,7 +137,7 @@ const Home = () => {
             </div>
 
             <div className="border-t border-t-gray-200 flex justify-between items-center mt-4 pt-4">
-              <span className="font-bold text-xl text-green-700">
+              <span className="font-bold text-md text-green-700">
                 {property.price}
               </span>
               <Link
