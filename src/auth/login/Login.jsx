@@ -1,4 +1,5 @@
 import { Button, Checkbox, Form, Input, Card } from "antd";
+import { Link } from "react-router";
 
 const Login = () => {
   const onFinish = (values) => {
@@ -46,6 +47,7 @@ const Login = () => {
             </Button>
           </Form.Item>
         </Form>
+        <p>Don't have an account? <Link to='/register'>Register</Link></p>
       </Card>
     </div>
   );

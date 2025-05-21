@@ -29,7 +29,9 @@ const Navigation = () => {
 
       {/* Logo */}
       <div>
-        <img src={logo} alt="Logo" className="w-16 h-16" />
+        <Link to="/">
+          <img src={logo} alt="Logo" className="h-10" />
+        </Link>
       </div>
 
       {/* Desktop Menu */}

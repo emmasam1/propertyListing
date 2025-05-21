@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { CiLocationOn } from "react-icons/ci";
 import { SlSizeFullscreen } from "react-icons/sl";
 import { IoPin } from "react-icons/io5";
+import { MdVerified } from "react-icons/md";
 const { Meta } = Card;
 
 const Home = () => {
@@ -15,6 +16,8 @@ const Home = () => {
       location: "Kuje",
       size: "450m²",
       price: "₦ 1,500,500",
+      verify: true,
+      promo: "₦ 800,000",
     },
     {
       id: 2,
@@ -24,6 +27,7 @@ const Home = () => {
       location: "Asokoro",
       size: "380m²",
       price: "₦ 2,300,000",
+      verify: false,
     },
     {
       id: 3,
@@ -33,6 +37,7 @@ const Home = () => {
       location: "Maitama",
       size: "500m²",
       price: "₦ 3,800,000",
+      verify: true,
     },
     {
       id: 4,
@@ -42,6 +47,7 @@ const Home = () => {
       location: "Lekki",
       size: "420m²",
       price: "₦ 2,150,000",
+      verify: true,
     },
     {
       id: 5,
@@ -51,6 +57,7 @@ const Home = () => {
       location: "Gwarinpa",
       size: "600m²",
       price: "₦ 4,000,000",
+      verify: false,
     },
     {
       id: 6,
@@ -60,6 +67,7 @@ const Home = () => {
       location: "Jabi",
       size: "370m²",
       price: "₦ 2,700,000",
+      verify: true,
     },
     {
       id: 7,
@@ -106,7 +114,7 @@ const Home = () => {
           <Card
             key={property.id}
             hoverable
-            className="overflow-hidden"
+            className="overflow-hidden relative"
             cover={
               <div className="relative">
                 <img
@@ -121,6 +129,7 @@ const Home = () => {
               </div>
             }
           >
+            {property.verify ? <MdVerified color="blue" size={25} className="absolute right-4"/> : null}
             <h1 className="font-bold text-[1.3rem]">{property.title}</h1>
 
             <div className="flex justify-between items-center mt-4">
@@ -136,7 +145,15 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="border-t border-t-gray-200 flex justify-between items-center mt-4 pt-4">
+            <div className="border-t border-t-gray-200 mt-5">
+              {property.promo && (
+                <span className="text-sm text-red-500 font-semibold">
+                  Promo Price: {property.promo}
+                </span>
+              )}
+            </div>
+
+            <div className="flex justify-between items-center mt-4 pt-4">
               <span className="font-bold text-md text-green-700">
                 {property.price}
               </span>
